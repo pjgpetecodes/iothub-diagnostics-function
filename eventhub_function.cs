@@ -12,7 +12,7 @@ namespace iothub_diagnostics_function
     public static class eventhub_function
     {
         [FunctionName("eventhub_function")]
-        public static async Task Run([EventHubTrigger("samples-workitems", Connection = "")] EventData[] events, ILogger log)
+        public static async Task Run([EventHubTrigger("az220eventhub", Connection = "eventhub_function_RootManageSharedAccessKey_EVENTHUB")] EventData[] events, ILogger log)
         {
             var exceptions = new List<Exception>();
 
